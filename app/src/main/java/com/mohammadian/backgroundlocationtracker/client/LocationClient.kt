@@ -1,4 +1,4 @@
-package com.mohammadian.backgroundlocationtracker
+package com.mohammadian.backgroundlocationtracker.client
 
 import android.location.Location
 import kotlinx.coroutines.flow.Flow

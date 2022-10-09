@@ -1,4 +1,4 @@
-package com.mohammadian.backgroundlocationtracker
+package com.mohammadian.backgroundlocationtracker.client
 
 import android.annotation.SuppressLint
 import android.content.Context
@@ -9,6 +9,7 @@ import com.google.android.gms.location.FusedLocationProviderClient
 import com.google.android.gms.location.LocationCallback
 import com.google.android.gms.location.LocationRequest
 import com.google.android.gms.location.LocationResult
+import com.mohammadian.backgroundlocationtracker.hasLocationPermission
 import kotlinx.coroutines.channels.awaitClose
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.callbackFlow

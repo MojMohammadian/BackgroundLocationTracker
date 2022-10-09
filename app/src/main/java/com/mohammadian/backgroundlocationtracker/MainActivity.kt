@@ -18,6 +18,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.core.app.ActivityCompat
+import com.mohammadian.backgroundlocationtracker.services.LocationService
 import com.mohammadian.backgroundlocationtracker.ui.theme.BackgroundLocationTrackerTheme
 
 class MainActivity : ComponentActivity() {

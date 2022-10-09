@@ -1,4 +1,4 @@
-package com.mohammadian.backgroundlocationtracker
+package com.mohammadian.backgroundlocationtracker.services
 
 import android.app.NotificationManager
 import android.app.Service
@@ -7,6 +7,9 @@ import android.content.Intent
 import android.os.IBinder
 import androidx.core.app.NotificationCompat
 import com.google.android.gms.location.LocationServices
+import com.mohammadian.backgroundlocationtracker.client.DefaultLocationClient
+import com.mohammadian.backgroundlocationtracker.client.LocationClient
+import com.mohammadian.backgroundlocationtracker.R
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.SupervisorJob
