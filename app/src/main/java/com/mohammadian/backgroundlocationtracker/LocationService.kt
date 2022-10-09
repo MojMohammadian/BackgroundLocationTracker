@@ -67,7 +67,8 @@ class LocationService : Service() {
     }
 
     private fun stop() {
-
+        stopForeground(STOP_FOREGROUND_DETACH)
+        stopSelf()
     }
 
     override fun onDestroy() {
