@@ -14,8 +14,9 @@ import kotlinx.coroutines.channels.awaitClose
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.callbackFlow
 import kotlinx.coroutines.launch
+import javax.inject.Inject
 
-class DefaultLocationClient(
+class DefaultLocationClient @Inject constructor(
     private val context: Context,
     private val client: FusedLocationProviderClient
 ) : LocationClient {

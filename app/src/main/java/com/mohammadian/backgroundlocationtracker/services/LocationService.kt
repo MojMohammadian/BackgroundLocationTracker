@@ -10,6 +10,7 @@ import com.google.android.gms.location.LocationServices
 import com.mohammadian.backgroundlocationtracker.client.DefaultLocationClient
 import com.mohammadian.backgroundlocationtracker.client.LocationClient
 import com.mohammadian.backgroundlocationtracker.R
+import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.SupervisorJob
@@ -17,18 +18,12 @@ import kotlinx.coroutines.cancel
 import kotlinx.coroutines.flow.catch
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
-
+import javax.inject.Inject
+@AndroidEntryPoint
 class LocationService : Service() {
     private val serviceScope = CoroutineScope(SupervisorJob() + Dispatchers.IO)
-    private lateinit var locationClient: LocationClient
+    @Inject lateinit var locationClient: LocationClient
 
-    override fun onCreate() {
-        super.onCreate()
-        locationClient = DefaultLocationClient(
-            applicationContext,
-            LocationServices.getFusedLocationProviderClient(applicationContext)
-        )
-    }
 
     override fun onBind(intent: Intent?): IBinder? {
         return null
